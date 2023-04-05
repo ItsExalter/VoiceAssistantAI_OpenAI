@@ -1,0 +1,60 @@
+{
+    "intents": [
+        {
+            "tag" : "greeting",
+            "patterns" : [
+                "hi",
+                "hello",
+                "what's up?"
+            ],
+            "responses" : [
+                "Hi, How can i help you?",
+                "Yes sir!",
+                "Hello Sir!"
+            ]
+        },
+        {
+            "tag" : "weather",
+            "patterns" : [
+                "today weather?",
+                "weather"
+            ],
+            "responses" : []
+        },
+        {
+            "tag" : "search",
+            "patterns" : [
+                "Search for",
+                "What is",
+                "Explain about",
+                "Do You Know"
+            ],
+            "responses" : []
+        },
+        {
+            "tag" : "date",
+            "patterns" : [
+                "what is today",
+                "today date"
+            ],
+            "responses" : []
+        },
+        {
+            "tag" : "time",
+            "patterns" : [
+                "what time is it?",
+                "now time"
+            ],
+            "responses" : []
+        },
+        {
+            "tag" : "exit",
+            "patterns" : [
+                "Exit",
+                "Quit",
+                "End Session"
+            ],
+            "responses" : []
+        }
+    ]
+}
