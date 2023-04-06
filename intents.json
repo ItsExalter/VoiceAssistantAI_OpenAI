@@ -52,7 +52,10 @@
             "patterns" : [
                 "Exit",
                 "Quit",
-                "End Session"
+                "End Session",
+                "Thank You",
+                "Goodbye",
+                "Bye"
             ],
             "responses" : []
         }

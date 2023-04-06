@@ -43,16 +43,18 @@ def weather():
 # Function for get today date
 def getdate():
     date = today.strftime("%d %B %Y")
+    result = "Today date is", date
     
     if date is not None:
-        text_to_speech("Today date is" , date)
+        text_to_speech(result)
 
 # Function for get now time
 def gettime():
     nowtime = time.strftime("%I:%M %p")
+    result = "The time is", nowtime
 
     if nowtime is not None:
-        text_to_speech("The time is", nowtime)
+        text_to_speech(result)
 
 # Call a Function to Search VIA OpenAI
 def openai_search():
