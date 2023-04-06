@@ -3,6 +3,8 @@ import speech_recognition as sr
 import pyttsx3 as tts
  
 from neuralintents import GenericAssistant
+from datetime import date
+from datetime import datetime
 
 import api_secret
 import openai
@@ -12,6 +14,10 @@ response = ""
 
 # Set API for OpenAI
 openai.api_key = api_secret.API_KEY
+
+# Set Today Date variable
+today = date.today()
+time = datetime.now()
 
 # Set for Speech Recognition
 recognizer = sr.Recognizer()
@@ -33,6 +39,18 @@ def text_to_speech(text):
 # Call a Function to Check the Weather
 def weather():
     print("It Works")
+
+def getdate():
+    date = today.strftime("%d %B %Y")
+    
+    if date is not None:
+        text_to_speech("Today date is" , date)
+
+def gettime():
+    nowtime = time.strftime("%I:%M %p")
+
+    if nowtime is not None:
+        text_to_speech("The time is", nowtime)
 
 # Call a Function to Search VIA OpenAI
 def openai_search():
@@ -60,6 +78,8 @@ mappings = {
     "weather": weather,
     "search": openai_search,
     "exit": exit_session,
+    "date": getdate,
+    "time": gettime,
 }
 
 # Set the Intents and Train the Model
