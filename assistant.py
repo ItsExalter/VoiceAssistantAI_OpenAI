@@ -40,12 +40,14 @@ def text_to_speech(text):
 def weather():
     print("It Works")
 
+# Function for get today date
 def getdate():
     date = today.strftime("%d %B %Y")
     
     if date is not None:
         text_to_speech("Today date is" , date)
 
+# Function for get now time
 def gettime():
     nowtime = time.strftime("%I:%M %p")
 
