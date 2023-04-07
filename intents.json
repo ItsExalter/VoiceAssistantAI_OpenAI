@@ -14,14 +14,6 @@
             ]
         },
         {
-            "tag" : "weather",
-            "patterns" : [
-                "today weather?",
-                "weather"
-            ],
-            "responses" : []
-        },
-        {
             "tag" : "search",
             "patterns" : [
                 "Search for",

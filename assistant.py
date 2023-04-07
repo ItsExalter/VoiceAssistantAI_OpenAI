@@ -9,7 +9,7 @@ from datetime import datetime
 import api_secret
 import openai
 
-# Make response as a Global Functions
+# Make a Global Functions
 response = ""
 
 # Set API for OpenAI
@@ -21,6 +21,14 @@ time = datetime.now()
 
 # Set for Speech Recognition
 recognizer = sr.Recognizer()
+
+# Audio to Text
+def audio_to_text(audio):
+    result = recognizer.recognize_google(
+        audio, language="en-US", show_all=False
+    )
+
+    return result
 
 # Set for Text to Speech
 speaker = tts.init()
@@ -36,9 +44,6 @@ def text_to_speech(text):
     speaker.runAndWait()
     speaker.stop()
 
-# Call a Function to Check the Weather
-def weather():
-    print("It Works")
 
 # Function for get today date
 def getdate():
@@ -79,7 +84,6 @@ def exit_session():
 
 # Mapping the Functions for this Assistant
 mappings = {
-    "weather": weather,
     "search": openai_search,
     "exit": exit_session,
     "date": getdate,
@@ -101,9 +105,7 @@ while True:
             print("Listening is stopped")
 
             # Change from the Audio into Text
-            response = recognizer.recognize_google(
-                audio, language="en-US", show_all=False
-                )
+            response = audio_to_text(audio)
             
             # Make the result is Lowercase
             response = response.lower()
