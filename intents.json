@@ -21,15 +21,16 @@
                 "group member"
             ],
             "responses" : [
-                "We Are Group 1 and our members consist of Arrafie, Ghifari, Fikriansyah, and Jaya"
+                "We Are Group 1 and our members consist of Arrafie, Ghifari, Fikri, and Jaya"
             ]
         },
         {
             "tag" : "search",
             "patterns" : [
-                "Search for",
+                "Search",
                 "What is",
-                "Explain about",
+                "Explain",
+                "Tell Me",
                 "Do You Know"
             ],
             "responses" : []
@@ -61,6 +62,17 @@
                 "Bye"
             ],
             "responses" : []
+        },
+        {
+            "tag" : "no-keywords",
+            "patterns" : [
+                " "
+            ],
+            "responses" : [
+                "I'm Sorry, but Can You Give Me a Spesific Question?",
+                "I'm sorry, but I'm not sure what you're looking for. Can you please provide me with more information or a specific question",
+                "I Apologize, Please Try Again with a Spesific Question."
+            ]
         }
     ]
 }

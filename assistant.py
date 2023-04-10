@@ -40,6 +40,7 @@ speaker.setProperty('voice', voices[1].id) #it depends on the list of TTS on you
 
 # Text to Speech Functions
 def text_to_speech(text):
+    print("Chatbot: " + text)
     speaker.say(text)
     speaker.runAndWait()
     speaker.stop()
@@ -66,7 +67,7 @@ def openai_search():
 
     # Search in OpenAI
     result = openai.Completion.create(
-            model="text-davinci-002", prompt=response, max_tokens=100
+            model="text-davinci-003", prompt=response, max_tokens=100
         )
     # Purge the Answer Result from OpenAI
     final_result = result["choices"][0]["text"].replace("\n", "")
@@ -107,6 +108,8 @@ while True:
             # Change from the Audio into Text
             response = audio_to_text(audio)
             
+            print("Me: " + response)
+
             # Make the result is Lowercase
             response = response.lower()
 
