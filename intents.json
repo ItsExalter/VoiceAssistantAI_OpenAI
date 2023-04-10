@@ -14,6 +14,17 @@
             ]
         },
         {
+            "tag" : "group",
+            "patterns" : [
+                "which group",
+                "our group",
+                "group member"
+            ],
+            "responses" : [
+                "We Are Group 1 and our members consist of Arrafie, Ghifari, Ian, and Jaya"
+            ]
+        },
+        {
             "tag" : "search",
             "patterns" : [
                 "Search for",
